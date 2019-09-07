@@ -49,22 +49,48 @@ public class wordDefinition extends HttpServlet{
 				
 		String meaning= hmap.get(delimiter);
 		
-		
-		for(int i=0; i< keysList.size();i++)
-		{
-			//System.out.println(keysList.get(i));
-			//System.out.println(meaning.contains((String) keysList.get(i)));
-			if (meaning.contains((String) keysList.get(i)))
+		String final_output_of_definition ="";
+		List likeTermList = new ArrayList();
+			for(int i=0; i< keysList.size();i++)
 			{
-				System.out.println(keysList.get(i));
-				System.out.println("contains a glossary list");
+				//System.out.println("At the beginning of the for loop ************* "+final_output_of_definition);
+				//System.out.println(keysList.get(i));
+				//System.out.println(meaning.contains((String) keysList.get(i)));
+				if (meaning.contains((String) keysList.get(i)))
+				{
+					//System.out.println(keysList.get(i));
+					//System.out.println("contains a glossary list");
+					String [] splitMeaning = meaning.split(" ");
+					int j=0;
+					String final_definition ="";
+					for (j=0;j<splitMeaning.length;j++)
+					{
+						System.out.println(splitMeaning[j]);
+						if (splitMeaning[j].equals((String)keysList.get(i)))
+						{
+							likeTermList.add(splitMeaning[j]);
+							final_definition+="<a style=\"color:blue;\" id=\""+splitMeaning[j]+"\" name=\""+splitMeaning[j]+"\" onclick=\"glossary_click(id)\"> "+splitMeaning[j]+"</a> ";
+						}
+						else
+						{
+							final_definition+=splitMeaning[j]+" ";
+						}
+					}
+					
+					final_output_of_definition = final_definition;
+				}
+				else 
+				{
+					//final_output_of_definition = meaning;
+					continue;
+					
+				}
+				
 			}
-			else 
-			{
-				System.out.println("Doesn't contains a glossary list");
-			}
-		}
+			if (final_output_of_definition == "")
+				final_output_of_definition = meaning;
 		
-		res.getWriter().println(meaning);
+			System.out.println(likeTermList);
+		res.getWriter().println(final_output_of_definition);
 	}
 }

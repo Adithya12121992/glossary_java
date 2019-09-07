@@ -8,6 +8,11 @@
     <script src="./js/jquery.min.js"></script>
     <link rel="stylesheet" href="./css/bootstrap.css"></link>
     <link rel="stylesheet" href="./css/bootstrap-grid.css"></link>
+    <style>
+    a,
+    a label{
+    cursor:pointer;}
+    </style>
 </head>
 <body>
     <div class="container">
@@ -58,7 +63,7 @@
             var i=0;
             for (i=0;i<glossary_json.glossary.length; i++)
             	{
-            		table_data+="<tr><td name=\""+glossary_json.glossary[i].word+"\" id=\""+glossary_json.glossary[i].word+"\" onclick=glossary_click(id);>"+glossary_json.glossary[i].word+"</td></tr>";
+            		table_data+="<tr><td name=\""+glossary_json.glossary[i].word+"\" id=\""+glossary_json.glossary[i].word+"\" onclick=glossary_click(id);><a>"+glossary_json.glossary[i].word+"</a></td></tr>";
             	}
             $( "#myTable" ).html(table_data);
         });
