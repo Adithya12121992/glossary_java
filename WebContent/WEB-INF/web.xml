@@ -34,4 +34,14 @@
   	<url-pattern>/definition</url-pattern>
   </servlet-mapping>
   
+  
+  <servlet>
+  	<servlet-name>readFile</servlet-name>
+  	<servlet-class>glossaryApp.readFile</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>readFile</servlet-name>
+  	<url-pattern>/file</url-pattern>
+  </servlet-mapping>
 </web-app>

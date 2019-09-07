@@ -4,8 +4,8 @@
     <title>Glossary</title>
     <script src="./js/bootstrap.bundle.js"></script>
     <script src="./js/bootstrap.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+    <script src="./js/jquery.min.js"></script>
     <link rel="stylesheet" href="./css/bootstrap.css"></link>
     <link rel="stylesheet" href="./css/bootstrap-grid.css"></link>
 </head>
@@ -13,21 +13,35 @@
     <div class="container">
             <h2>GLOSSARY</h2>
             <p>Type something in the input field to check for the Meaning of a word</p>
-            <input class="form-control" id="myInput" type="text" placeholder="Search..">
+            <div class="row">
+	            <div class="col-md-6">
+	            	<input class="form-control" id="myInput" type="text" placeholder="Search..">
+	            </div>
+	            <div class="col-md-6">
+	            	<button type="button" id="reset_search" class="btn btn-primary" onclick="reset_search()">Go Back</button>
+	            </div>
+            </div>
             <br>
-            <table class="table table">
-                <thead>
-                <tr>
-                    <th>Word List</th>
-                </tr>
-                </thead>
-                <tbody id="myTable">
-			               
-			               
-			               
-                </tbody>
-            </table>
-        <div class="container" id="glossary_result">
+            <div class="row">
+            	<div class="col-md-6">
+		            <table class="table table">
+		                <thead>
+		                <tr>
+		                    <th>Word List</th>
+		                </tr>
+		                </thead>
+		                <tbody id="myTable">
+					               
+					    <!-- Ajax will return the output here -->           
+					               
+		                </tbody>
+		            </table>
+		            </div>
+		        <div class="col-md-6">    
+	            	<div class="container" id="glossary_result">
+	            </div>
+            </div>
+        
 
         </div>
         </div>
@@ -35,12 +49,12 @@
 <script>
     $(document).ready(function() {
         $.get('displayAll' ,function(res) {
-            // Write here some callback function if necessary.
+            
         	console.log(res);
             glossary_json=JSON.parse(res);
             console.log(glossary_json.glossary.length);
 			var table_data="";           
-            //alert(glossary_json.glossary[0].word);
+            
             var i=0;
             for (i=0;i<glossary_json.glossary.length; i++)
             	{
@@ -56,16 +70,23 @@
                 $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
             });
         });
+        
     });
     
     
     function glossary_click(id_of_clicked_item) {
     	console.log(typeof(id_of_clicked_item));
         $("#glossary_result").show();
-        $("#glossary_result").html("<h3>Meaning of "+id_of_clicked_item+"</h3>");
+        
 	        $.get('definition',{name:id_of_clicked_item}, function(res_of_meaning){
 	        	console.log(res_of_meaning);
+	        	$("#glossary_result").html("<h3>Meaning of "+id_of_clicked_item+" : "+res_of_meaning+"</h3>");
 	        });
+    }
+    
+    function reset_search()
+    {
+    	$("#glossary_result").hide();
     }
 </script>
 </body>

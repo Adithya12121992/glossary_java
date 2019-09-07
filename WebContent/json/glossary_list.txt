@@ -1,0 +1,8 @@
+apple:A fruit
+company:An entity that engages in business
+business:It is the activity of making one's living or making money by producing or buying and selling products
+products:An article or substance that is manufactured or refined for sale
+aristocrat:the greatest of minds
+rohan:A human 
+adithya:The best
+aradhana:A human who is not humane 
