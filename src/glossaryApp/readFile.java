@@ -26,15 +26,9 @@ public class readFile extends HttpServlet{
 		  
 		Set set = hmap.entrySet();
 	    Iterator iterator = set.iterator();
-	    String final_json = "{\"glossary\":[";
 	    while (iterator.hasNext()) {
             Map.Entry mentry = (Map.Entry) iterator.next();
-            final_json+="{\"word\":\""+mentry.getKey()+"\",\"meaning\":\""+mentry.getValue()+"\"},";
-            //System.out.println(mentry.getKey()+" : "+mentry.getValue());
 	    }
-	    final_json = final_json.substring(0, final_json.length() - 1);
-        final_json += "]}";
-        System.out.println(final_json);
 		//res.getWriter().println("from the readFile Servlet");
 	}
 }

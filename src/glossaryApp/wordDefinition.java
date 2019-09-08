@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -53,19 +54,16 @@ public class wordDefinition extends HttpServlet{
 		List likeTermList = new ArrayList();
 			for(int i=0; i< keysList.size();i++)
 			{
-				//System.out.println("At the beginning of the for loop ************* "+final_output_of_definition);
-				//System.out.println(keysList.get(i));
-				//System.out.println(meaning.contains((String) keysList.get(i)));
+				
 				if (meaning.contains((String) keysList.get(i)))
 				{
-					//System.out.println(keysList.get(i));
-					//System.out.println("contains a glossary list");
+					
 					String [] splitMeaning = meaning.split(" ");
 					int j=0;
 					String final_definition ="";
 					for (j=0;j<splitMeaning.length;j++)
 					{
-						System.out.println(splitMeaning[j]);
+						//System.out.println(splitMeaning[j]);
 						if (splitMeaning[j].equals((String)keysList.get(i)))
 						{
 							likeTermList.add(splitMeaning[j]);
@@ -90,7 +88,27 @@ public class wordDefinition extends HttpServlet{
 			if (final_output_of_definition == "")
 				final_output_of_definition = meaning;
 		
-			System.out.println(likeTermList);
-		res.getWriter().println(final_output_of_definition);
+			String[] final_splitted_output = meaning.split(" ");
+			int k=0;
+			for(k=0; k<likeTermList.size();k++)
+			{
+				int l=0;
+				for (l=0;l<final_splitted_output.length;l++)
+				{
+					if (likeTermList.get(k).equals(final_splitted_output[l]))
+					{
+						final_splitted_output[l] = "<a style=\"color:blue;\" id=\""+likeTermList.get(k)+"\" name=\""+likeTermList.get(k)+"\" onclick=\"glossary_click(id)\">"+likeTermList.get(k)+"</a>";
+					}
+				}
+			}
+			
+			String op_final="";
+			for (int x=0;x<final_splitted_output.length;x++)
+			{
+				op_final+=final_splitted_output[x]+" ";
+			}
+			System.out.println(op_final);
+			
+		res.getWriter().println(op_final);
 	}
 }
