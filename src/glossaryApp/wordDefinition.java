@@ -20,7 +20,7 @@ public class wordDefinition extends HttpServlet{
 
 	public void service(HttpServletRequest req,HttpServletResponse res ) throws IOException
 	{
-		File filehandler = new File("/Users/akm/eclipse-workspace/glossary_java/WebContent/json/glossary_list.txt");
+		File filehandler = new File("/Users/akm/eclipse-workspace/glossary_java/WebContent/json/final_word_list.txt");
 		BufferedReader br = new BufferedReader(new FileReader(filehandler));
 		String st; 
 		LinkedHashMap<String, String> hmap = new LinkedHashMap<String, String>();
@@ -64,7 +64,7 @@ public class wordDefinition extends HttpServlet{
 					for (j=0;j<splitMeaning.length;j++)
 					{
 						//System.out.println(splitMeaning[j]);
-						if (splitMeaning[j].equals((String)keysList.get(i)))
+						if (splitMeaning[j].equalsIgnoreCase((String)keysList.get(i)))
 						{
 							likeTermList.add(splitMeaning[j]);
 							final_definition+="<a style=\"color:blue;\" id=\""+splitMeaning[j]+"\" name=\""+splitMeaning[j]+"\" onclick=\"glossary_click(id)\"> "+splitMeaning[j]+"</a> ";

@@ -40,7 +40,8 @@ public class displayAll extends HttpServlet{
 		
 		
 		
-		File filehandler = new File("/Users/akm/eclipse-workspace/glossary_java/WebContent/json/glossary_list.txt");
+		File filehandler = new File("/Users/akm/eclipse-workspace/glossary_java/WebContent/json/final_word_list.txt");
+		//File filehandler = new File("./final_word_list.txt");
 		BufferedReader br = new BufferedReader(new FileReader(filehandler));
 		String st; 
 		LinkedHashMap<String, String> hmap = new LinkedHashMap<String, String>();

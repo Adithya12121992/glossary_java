@@ -1,0 +1,29 @@
+audible: When the quarterback changes the football play at the line of scrimmage .
+backfield: The area of the football field behind the line of scrimmage .
+backs: Football players which stand behind the line of scrimmage .
+blitz: A football play where the defensive team rushes more football players than usual to try and sack the quarterback .
+blocking: What the offensive team does to prevent a defensive player from tackling the player with the football .
+center: In the middle of the offensive line, the center snaps the football to the quarterback .
+cornerbacks: These football players cover the wide receivers and try to prevent them from catching a pass .
+encroachment: A penalty when any football player contacts the other team prior to the snap .
+facemask: A mask used to protect the football players .
+fumble: When a football player drops the football . The ball is available for any other player to gain possession for his team .
+holding: A penalty where a football player grabs an opponent . 
+interception: A pass that is caught by a football player on the defense .
+lateral: A backward pass. Football players may lateral the football as many times per play as they want . If a lateral is dropped, the ball is still live (like a fumble) and any player may recover it . 
+offside: A penalty that occurs when any part of a football player's body is beyond his line of scrimmage when the football is snapped . 
+pocket: The place where the quarterback stands just behind the center. Here he is protected from the pass rush by his blockers .
+possesion: The team who has the ball is on offense. They have possession of the ball .
+punt: A football kick to the other team to give them the ball downfield rather than lose the football on downs .
+quarterback: This is the football player that starts each play. He takes the snap from the center and either runs with it, hands off the football to another player, or passes it.
+receivers: The football players who catch the football .
+rush: When the football player runs with the football . Also, when a football player tries to tackle the quarterback while in the pocket .
+sack: When the quarterback is tackled behind the line of scrimmage .
+safety: When a football player is tackled in his own end zone . The defense gets 2 points and the possession of the football from a free kick .
+scrambling: When the quarterback runs around trying not to get sacked with the football .
+scrimmage:It is an imaginary transverse line (across the width of the football field) beyond which a team cannot cross until the next play has begun .
+snap: Also called the hike, the snap starts the football play . The center hands or passes the football between his legs to a player standing behind him (usually the quarterback )
+tackle: When a football player causes the player carrying the ball to touch the ground such that they are considered down. The end of the play .
+touchdown: A 6 point score. When a player has control of the football within the end zone .
+turnover: When , with either a fumble or an interception , one team loses possession of the football to the other . 
+linemen: The offensive and defensive football players who start each play at the line of scrimmage .
