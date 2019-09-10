@@ -14,3 +14,10 @@ Pre-requisite:
 1. Adithya - Design of the project, JAVA Servlet code and handle the Git repo
 2. Rohan - The design of the HTML page and the data scraping of the glossary list.
 3. Pratik - The Javascript, JQuery piece of the project.
+
+
+# Collaborations
+
+1. Used a collaboration tool "Slack" for the regular updates and for group communication purpose.
+2. Bi-weekly inperson meetup for the discussions on the progress of the project.
+3. Used Git hub for the version management. (1 person in the team was responsible for the maintenance of the GIT hub repo)
