@@ -1,4 +1,4 @@
-# glossary_java
+# Glossary_java
 JAVA based code for Glossary
 
 Pre-requisite:
@@ -7,16 +7,14 @@ Pre-requisite:
 3. Run the html from the IDE to check for the functionality.
 
 
-
-
 # Contributions
 
-1. Adithya - Design of the project, JAVA Servlet code and handle the Git repo
+1. Adithya - Designing of the entire project, JAVA Servlet code and handling the Git repo
 2. Rohan - The design of the HTML page and the data scraping of the glossary list.
-3. Pratik - The Javascript, JQuery piece of the project.
+3. Pratik - The Javascript, JQuery of the project.
 
 
-# Collaborations
+# Collaboration
 
 1. Used a collaboration tool "Slack" for the regular updates and for group communication purpose.
 2. Bi-weekly inperson meetup for the discussions on the progress of the project.
